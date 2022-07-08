@@ -1,0 +1,14 @@
+prefix=/build/demo/build/FFmpeg-n3.3.3/../../install/ffmpeg
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 57.89.100
+Requires: 
+Requires.private: libswresample >= 2.7.100, libavutil >= 55.58.100
+Conflicts:
+Libs: -L${libdir}  -lavcodec 
+Libs.private: -ldl -ldl -L/build/demo/build/openh264-1.7.0/../../install/openh264/lib -lopenh264 -lstdc++ -lpthread -lm -lm -pthread
+Cflags: -I${includedir}
